@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hyphen Beauty</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background-color: white;
+        }
+
+
+        /* Header */
+
+        .header {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 70px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #cccccc;
+            width: 350px;
+            padding: 10px 15px;
+        }
+
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            font-size: 22px;
+        }
+
+
+        .header-icons span {
+            cursor: pointer;
+        }
+
+
+        .header-icons span:hover {
+            color: #b47b7b;
+        }
+
+
+        /* Navigation Bar */
+
+        .navbar {
+            padding: 18px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            list-style: none;
+        }
+
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+        }
+
+
+        .nav-menu a:hover {
+            color: #b47b7b;
+        }
+
+
+        /* Hero Section */
+
+        .hero-section {
+            height: 500px;
+            display: flex;
+            align-items: center;
+            background-color: #f8eeee;
+        }
+
+
+        .hero-image {
+            width: 55%;
+            height: 100%;
+        }
+
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .hero-content {
+            width: 45%;
+            padding: 60px;
+        }
+
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+
+        .shop-button {
+            padding: 14px 35px;
+            border: none;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+
+        .shop-button:hover {
+            background-color: #b47b7b;
+        }
+
+
+        /* Product Section */
+
+        .product-section {
+            padding: 70px;
+        }
+
+
+        .product-section h2 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+
+        .section-description {
+            text-align: center;
+            margin: 15px 0 40px;
+            color: #777;
+        }
+
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+
+        .product-card {
+            border: 1px solid #eeeeee;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .product-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+
+        .product-card p {
+            color: #777;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+
+        .product-card .price {
+            color: #222;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        .product-card .rating {
+            color: #d59a45;
+        }
+
+
+        .product-card button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .product-card button:hover {
+            background-color: #b47b7b;
+        }
+
+
+        /* Featured Section */
+
+        .featured-section {
+            display: flex;
+            gap: 25px;
+            padding: 0 70px 70px;
+        }
+
+
+        .featured-banner {
+            width: 50%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .featured-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .featured-content {
+            position: absolute;
+            top: 50px;
+            left: 40px;
+        }
+
+
+        .featured-content h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        .featured-content p {
+            margin-bottom: 20px;
+        }
+
+
+        .featured-content button {
+            padding: 12px 25px;
+            border: none;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .featured-content button:hover {
+            background-color: #b47b7b;
+        }
+
+
+        /* Newsletter Section */
+
+        .newsletter-section {
+            text-align: center;
+            padding: 70px;
+            background-color: #f8eeee;
+        }
+
+
+        .newsletter-section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        .newsletter-section p {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .newsletter-form input {
+            width: 350px;
+            padding: 14px;
+            border: 1px solid #cccccc;
+        }
+
+
+        .newsletter-form button {
+            padding: 14px 25px;
+            border: none;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .newsletter-form button:hover {
+            background-color: #b47b7b;
+        }
+
+
+        /* Footer */
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 70px;
+            background-color: #222;
+            color: white;
+        }
+
+
+        .footer-box {
+            width: 23%;
+        }
+
+
+        .footer-box h3 {
+            margin-bottom: 20px;
+        }
+
+
+        .footer-box p {
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+
+        .footer-box a {
+            display: block;
+            color: #cccccc;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+
+        .footer-box a:hover {
+            color: white;
+        }
+
+
+        /* Copyright */
+
+        .copyright {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            color: #cccccc;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+            HYPHEN
+        </div>
+
+
+
+
+
+        <div class="header-icons">
+
+            <span>👤</span>
+
+            <span>♡</span>
+
+            <span>🛒</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <ul class="nav-menu">
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Shop</a></li>
+
+            <li><a href="#">Skincare</a></li>
+
+            <li><a href="#">Makeup</a></li>
+
+            <li><a href="#">New Arrivals</a></li>
+
+            <li><a href="#">Best Sellers</a></li>
+
+            <li><a href="#">Offers</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
+    <main>
+
+
+        <!-- Hero Banner -->
+
+        <section class="hero-section">
+
+
+            <div class="hero-image">
+
+                <img src="../accest/hero_image.png" alt="Beauty Products">
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <h1>Beauty That Feels Like You</h1>
+
+
+                <p>
+                    Discover skincare and beauty products made to make
+                    you feel confident and beautiful every day.
+                </p>
+
+
+                <button class="shop-button">
+                    Shop Now
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Product Section -->
+
+        <section class="product-section">
+
+
+            <h2>Our Best Sellers</h2>
+
+
+            <p class="section-description">
+                Explore our most loved beauty products
+            </p>
+
+
+            <div class="product-container">
+
+
+                <article class="product-card">
+
+                    <img src="../accest/serum_image.png" alt="Face Serum">
+
+                    <h3>Glow Face Serum</h3>
+
+                    <p>
+                        Gives your skin a natural glow and smooth look.
+                    </p>
+
+                    <p class="price">₹599</p>
+
+                    <p class="rating">★★★★★</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/face_cream_image.png" alt="Face Cream">
+
+                    <h3>Hydrating Face Cream</h3>
+
+                    <p>
+                        Keeps your skin soft, fresh and hydrated.
+                    </p>
+
+                    <p class="price">₹499</p>
+
+                    <p class="rating">★★★★☆</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/lip_balm_image.png" alt="Lip Balm">
+
+                    <h3>Moisturizing Lip Balm</h3>
+
+                    <p>
+                        Soft and moisturized lips throughout the day.
+                    </p>
+
+                    <p class="price">₹299</p>
+
+                    <p class="rating">★★★★★</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/sunscreen_image.png" alt="Sunscreen">
+
+                    <h3>Daily Sunscreen</h3>
+
+                    <p>
+                        Protect your skin from harmful sun rays.
+                    </p>
+
+                    <p class="price">₹699</p>
+
+                    <p class="rating">★★★★☆</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/face_wash_image.png" alt="Face Wash">
+
+                    <h3>Gentle Face Wash</h3>
+
+                    <p>
+                        Cleans your skin and removes daily impurities.
+                    </p>
+
+                    <p class="price">₹399</p>
+
+                    <p class="rating">★★★★★</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/body_lotion_image.png" alt="Body Lotion">
+
+                    <h3>Body Moisturizer</h3>
+
+                    <p>
+                        Provides deep moisture for soft skin.
+                    </p>
+
+                    <p class="price">₹549</p>
+
+                    <p class="rating">★★★★☆</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/lip_balm_image.png" alt="Lip Tint">
+
+                    <h3>Natural Lip Tint</h3>
+
+                    <p>
+                        Gives your lips a beautiful natural colour.
+                    </p>
+
+                    <p class="price">₹349</p>
+
+                    <p class="rating">★★★★★</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+                <article class="product-card">
+
+                    <img src="../accest/face_cream_image.png" alt="Face Mask">
+
+                    <h3>Clay Face Mask</h3>
+
+                    <p>
+                        Refresh your skin and remove excess oil.
+                    </p>
+
+                    <p class="price">₹449</p>
+
+                    <p class="rating">★★★★☆</p>
+
+                    <button>Add to Cart</button>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Banners -->
+
+        <section class="featured-section">
+
+
+            <div class="featured-banner">
+
+                <img src="../accest/hero1_image.png" alt="Skincare Products">
+
+
+                <div class="featured-content">
+
+                    <h2>Skincare Essentials</h2>
+
+                    <p>
+                        Take care of your skin every day.
+                    </p>
+
+                    <button>Explore Now</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-banner">
+
+                <img src="../accest/2_image.png" alt="Makeup Products">
+
+
+                <div class="featured-content">
+
+                    <h2>Everyday Makeup</h2>
+
+                    <p>
+                        Simple makeup for every occasion.
+                    </p>
+
+                    <button>Shop Collection</button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Newsletter -->
+
+        <section class="newsletter-section">
+
+
+            <h2>Join Our Newsletter</h2>
+
+
+            <p>
+                Get updates about new products and special offers.
+            </p>
+
+
+            <div class="newsletter-form">
+
+                <input type="email" placeholder="Enter your email">
+
+
+                <button>
+                    Subscribe
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+
+        <div class="footer-box">
+
+            <h3>About Us</h3>
+
+            <p>
+                Hyphen brings beauty and skincare products
+                that help you feel confident every day.
+            </p>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Customer Care</h3>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Shipping Information</a>
+
+            <a href="#">Return Policy</a>
+
+            <a href="#">FAQs</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+
+            <a href="#">Shop</a>
+
+            <a href="#">New Arrivals</a>
+
+            <a href="#">Best Sellers</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+
+            <a href="#">Facebook</a>
+
+            <a href="#">YouTube</a>
+
+            <a href="#">Pinterest</a>
+
+        </div>
+
+
+    </footer>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Hyphen. All Rights Reserved.
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>

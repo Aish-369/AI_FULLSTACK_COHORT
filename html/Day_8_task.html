@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBG CARD - Grow Your Business</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* --- Navbar Styling --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #ffffff;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Simple colored text fallback for the MBG logo */
+        .logo-m {
+            color: #2196F3;
+        }
+
+        .logo-b {
+            color: #4CAF50;
+        }
+
+        .logo-g {
+            color: #FFEB3B;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: underline;
+            color: #8E24AA;
+            /* Purple links */
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .cta-demo-btn {
+            background-color: #4141a2;
+            /* Solid blue */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* --- Hero Section Layout --- */
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 5%;
+            gap: 40px;
+        }
+
+        /* Left Content Column */
+        .hero-content {
+            flex: 1;
+            max-width: 550px;
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid #0000FF;
+            color: #0000FF;
+            padding: 8px 30px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .hero-content h1 {
+            font-size: 44px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero-content h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h2 span {
+            color: #0000FF;
+            /* Blue emphasis text */
+        }
+
+        .hero-description {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Social/Messaging Icon Strip */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .icon-placeholder {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            /* Fallback round background circles */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Action Buttons Row */
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .action-btn {
+            flex: 1;
+            background: transparent;
+            border: 2px solid #22060f;
+            /* Bright pink border */
+            color: #270611;
+            padding: 12px 0;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Right Video Column */
+        .hero-video {
+            flex: 1;
+            max-width: 560px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio Container */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Breakdown */
+        @media (max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-video {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Navigation Header -->
+    <header>
+        <div class="logo-container">
+            <!-- Swap this out with your native image tag asset <img src="logo.png" alt="MBG CARD"> -->
+            <div class="logo-placeholder">
+                <span class="logo-m">M</span><span class="logo-b">B</span><span class="logo-g">G</span>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Industries</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Partner</a></li>
+            </ul>
+        </nav>
+
+        <button class="cta-demo-btn">Get A Demo</button>
+    </header>
+
+    <!-- Main Hero Block Content -->
+    <main class="hero-container">
+
+        <!-- Left Copywriter Info Box -->
+        <section class="hero-content">
+            <div class="badge">Powered by Official WhatsApp Business App</div>
+
+            <h1>Grow Your Business</h1>
+            <h2>with <span>MBG Card</span></h2>
+
+            <p class="hero-description">
+                Drive sales, loyalty, and customer satisfaction through automation. Automate your business across all
+                channels
+            </p>
+
+            <!-- Placeholder channel icons. Replace with FontAwesome vector icons/images -->
+            <div class="social-icons">
+                <div class="icon-placeholder" style="background-color: #25D366; color: white;">WA</div>
+                <div class="icon-placeholder" style="background-color: #1877F2; color: white;">FB</div>
+                <div class="icon-placeholder" style="background-color: #E1306C; color: white;">IG</div>
+                <div class="icon-placeholder" style="background-color: #0084FF; color: white;">MS</div>
+                <div class="icon-placeholder" style="background-color: #0088cc; color: white;">TG</div>
+            </div>
+
+            <div class="button-group">
+                <button class="action-btn">Call Now</button>
+                <button class="action-btn">Enquiry Now</button>
+            </div>
+        </section>
+
+        <!-- Right Media Embed Wrapper -->
+        <section class="hero-video">
+            <div class="video-wrapper">
+                <!-- Replace sample src link with your production YouTube video embed token string -->
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kbBT8jpg8xE?si=qPvYtpGtHI9gy6zs"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage your Digital Life - Jio Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* Left Section styling */
+    .left-section {
+      flex: 1;
+      max-width: 450px;
+    }
+
+    .left-section h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 25px;
+      line-height: 1.3;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+
+    .features-list li::before {
+      content: "➡️";
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    /* App Download Box */
+    .download-box {
+      background-color: #eaf5fa;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .qr-placeholder {
+      width: 90px;
+      height: 90px;
+      background-color: #333; /* Use actual QR code image here */
+      border-radius: 4px;
+    }
+
+    .download-text h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 5px;
+    }
+
+    .download-text p {
+      font-size: 12px;
+      color: #555555;
+      line-height: 1.4;
+    }
+
+    /* Right Login Section styling */
+    .right-section {
+      flex: 1;
+      max-width: 420px;
+      background-color: #f7f9fa;
+      border-radius: 24px;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .right-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 5px;
+    }
+
+    .right-section .subtitle {
+      font-size: 13px;
+      color: #666666;
+      margin-bottom: 25px;
+    }
+
+    /* Category Buttons */
+    .tab-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 20px;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background-color: #ffffff;
+    }
+
+    /* Input Field */
+    .input-group {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #7f8c8d;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #ffffff;
+    }
+
+    /* Main Action Button */
+    .submit-btn {
+      width: 100%;
+      background-color: #a3b8e2; /* Light blue/grey disabled state style */
+      color: #ffffff;
+      border: none;
+      border-radius: 25px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    /* Links styling */
+    .other-links {
+      font-size: 14px;
+      color: #4a148c;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .left-section, .right-section {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Left Info Side -->
+    <div class="left-section">
+      <h1>Manage your Digital Life<br>with the MyJio app</h1>
+      
+      <ul class="features-list">
+        <li>Recharge, pay bills, and check balance</li>
+        <li>Shop, UPI, and health</li>
+        <li>Movies, music, and games</li>
+        <li>Instant help with JioCare</li>
+      </ul>
+
+      <div class="download-box">
+        <!-- Replace placeholder div with <img src="qr-code.png"> -->
+        <div class="qr-placeholder">
+            <img src="../assest/myjioQRimage.png" alt="MyJio" style="width: 100%; height: 100px;">
+        </div>
+        <div class="download-text">
+          <h3>Do much more<br>with MyJio</h3>
+          <p>Scan the QR code with your mobile to download the app.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Login Card -->
+    <div class="right-section">
+      <h2>Welcome to Jio</h2>
+      <p class="subtitle">Log in to unlock a world of digital experiences.</p>
+
+      <div class="tab-container">
+        <button class="tab-btn active">Mobile</button>
+        <button class="tab-btn">Jio Fiber</button>
+        <button class="tab-btn">Business</button>
+      </div>
+
+      <div class="input-group">
+        <label for="mobile-num">Mobail Number:</label>
+        <input type="tel" id="mobile-num" autocomplete="off">
+      </div>
+
+      <button class="submit-btn" type="button">Genrate OTP</button>
+
+      <div class="other-links">
+        Other login options: JioFi, Lost SIM, etc.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

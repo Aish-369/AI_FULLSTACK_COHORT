@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Condition Statements</title>
+</head>
+
+<body>
+
+    <h1>Condition Statements</h1>
+    <hr>
+
+    <script>
+
+        // 1. if Statement
+
+        let age = +prompt("Enter your age");
+
+        if (age >= 18) {
+            alert("You are eligible");
+        }
+
+        if (age < 18) {
+            alert("You are not eligible");
+        }
+
+
+        // 2. if else
+
+        let no1 = +prompt("Enter number 1");
+        let no2 = +prompt("Enter number 2");
+        let op = prompt("Enter operation: add/mul");
+
+        if (op == "add") {
+            alert("Addition = " + (no1 + no2));
+        }
+        else {
+            alert("Multiplication = " + (no1 * no2));
+        }
+
+
+        // 3. if else if else
+
+        let shop_amt = +prompt("Enter your shopping amount");
+
+        let disc = 0;
+
+        if (shop_amt >= 50000) {
+            disc = 40;
+        }
+        else if (shop_amt >= 30000) {
+            disc = 30;
+        }
+        else if (shop_amt >= 20000) {
+            disc = 20;
+        }
+        else {
+            disc = 0;
+        }
+
+        let disc_Amt = shop_amt * disc / 100;
+        let final_Amt = shop_amt - disc_Amt;
+
+        if (disc > 0) {
+
+            alert(
+                "Discount = " + disc + "%\n" +
+                "Discount Amount = ₹" + disc_Amt + "\n" +
+                "Final Amount = ₹" + final_Amt
+            );
+
+        }
+        else {
+
+            alert("No discount applied");
+
+        }
+
+
+        // 4. Switch Statement
+
+        let choice = prompt("Enter operation: add/mul");
+
+        switch (choice) {
+
+            case "add":
+                console.log(10 + 20);
+                break;
+
+            case "mul":
+                console.log(10 * 20);
+                break;
+
+            default:
+                console.log("Invalid operation");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

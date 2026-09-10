@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- external css file connect inside html file -->
+     <link rel="stylesheet" href="./style.css">
+
+
+    <!-- Internal CSS -->
+
+    <style>
+
+
+
+/* Simple selectors- id class and tag */
+
+
+        /* class - . and reused multiple times */
+        /* .heading{
+            property:value
+        } */
+
+
+        .heading{
+            color:rgb(92, 4, 64);
+            background-color: whitesmoke;
+            border:solid purple 4px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+
+        /* id- indicate by #  */
+
+        #heading1{
+            color:orange
+        }
+
+        h1{
+            font-variant: small-caps;
+        }
+
+
+/* Universal Selector- *
+
+
+apply styling to whole website
+
+
+
+*/
+
+*{
+    background-color: aqua;
+
+    margin: 0;
+    padding:0;
+}
+
+    </style>
+</head>
+<body>
+
+    
+
+
+
+    <!-- Inline CSS -->
+
+    <img src="../assets/image3.png"  style="height:300px" alt="">
+
+    <!-- Internal CSS
+     
+
+    Selector/ Attributes- id and class
+
+    id- indicate by # and must be unique i.e same like your voterID/ Aadhar
+    class-indicate by . and Reused multiple times i.e same like your name
+    
+    
+    -->
+
+
+    <h1 style="color:white;background-color: black;text-align: center;padding:20px;font-size:30px">Welcome To Internal CSS </h1>
+
+    <h1 class="heading" id="heading1" style="">Welcome To Internal CSS</h1>
+
+
+    <h1 class="heading" id="heading2">Welcome Dear To Our CSS3 Module</h1>
+
+
+
+
+    <img src="../assets/2.jpg" class="img1" id="img1" alt="">
+    
+</body>
+</html>
