@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!--  -->
+
+    <!-- form event -->
+
+    <!-- onsubmit -->
+    <form onsubmit="fetchUser()">
+        <input type="email" placeholder="Enter Email" id="email" required>
+        <input type="password" placeholder="Enter Password" id="password" required>
+        <button type="submit">Login</button>
+    </form>
+
+
+
+
+    <script>
+
+
+
+
+
+        // Events -:
+        // Perform some operations on users activity / actions.
+        // JS is a events based scripting language
+        // events prefix starts with 'on'
+
+        // There are 4 type of events -:
+            // 1. Mouse events
+            // 2. keyword events
+            // 3. window events
+            // 4. form events
+
+
+        // 1. Mouse events -:
+            // onclick - when we click on html elements
+            // ondblclick - when we click doubled
+            // onmouseover - when we over html element
+            // onmouseleave - when we leave from html elements
+            // oncontextmenu - when we right click on mouse button (context menu bar)
+
+
+        // 2. keyword events -: Works on keyboard
+            // onkeypress - when we press any key
+            // onkeyup - when we release any key after press
+            // onkeydown - when we press down key
+
+        // 3. form events -:
+            // onblur
+            // onfocus
+            // onsubmit   - imp
+            // onchange   - imp
+            // onselect
+
+
+
+        // confirm dialogue box - ask for confirmation , yes / no
+
+        const fetchUser = () => {
+            let Email = email.value;
+            let Password = password.value;
+            console.log(Email + " " + Password);
+        }
+
+
+        // 4. window events
+            // onload - when we load our window
+            // onscroll - when we scroll our window
+            // onresize - when we resize our window
+
+
+    </script>
+
+
+
+</body>
+
+</html>

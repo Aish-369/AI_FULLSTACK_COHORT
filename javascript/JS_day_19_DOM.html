@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading">Welcome to modern JS</h1>
+
+
+    <script>
+
+
+        // DOM-: Document Object Model
+
+        // It is a hierarchy of our html page or document
+        // when our web page loads on a browser it crates a dom object (tree based structure of our html documents)
+        // It is used to make our website dynamic and javascript gets all the power to make our application powerful
+        // Used to connect JS and Html,Css together
+
+        // we can access html elements using dom methods ands properties
+        // Using html dom we can access html elements
+        // We can add / remove / change and delete html elements (html elements , attributes , events and styling)
+
+        let dom=document;
+        console.log(dom);
+
+
+        console.log(document.head)
+        console.log(document.body)
+
+
+
+        // Dom Methods -: To access html elements
+        // 1. by id  -: documents.getElementsById() - Mostly used in latest Technology
+        // 2. by class -: documents.getElementsByName()
+        // 3. by tag name -: documents.getElementsByTagName()
+        // 4. by name -: documents.getElementsByName()
+
+
+
+        // Dom Properties -:
+        // 1. .innerHTML -: used to extract or fetch html content with including inside elements as well
+        // 2. .innerText -: used to fetch html content only and excluding elements
+        // 3. .style.color -: used to apply style(color)
+
+
+
+        // Common methods -
+        // querySelector - fetch only matching elements
+        // document.querySelector('.className / #idName / tagName')
+
+
+        // querySelectorAll - fetch all elements
+        // document.querySelectorAll('.className / #idName / tagName')
+
+
+        // get data
+        let result=document.getElementById('heading')
+        console.log(result)
+
+        let result2=document.getElementById('heading').innerHTML
+        console.log(result2)
+
+
+        // we can access html elements without dom methods - document.getElementById
+        let result3=document.getElementById('heading').innerText
+        console.log(result3)
+
+        // we can access html elements without dom methods - document.getElementById
+        let result4=heading.innerText
+        console.log(result3)
+
+
+
+        // set data
+        let result5=getElementById('heading').innerText="Hello This is FrontEnd Technology"
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

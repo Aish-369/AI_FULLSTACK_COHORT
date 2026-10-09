@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .container{
+        height: 100vh;
+        width: 100vw;
+        float :left;
+        background-color: aqua;
+    }
+
+    .container1{
+        height: 50vh;
+        width: 400px;
+        background-color: blueviolet;
+        float: left;
+    }
+
+    .container2{
+        height: 50vh;
+        width: 400px;
+        background-color: rgb(0, 0, 0);
+        float: left;
+
+        /* position- (static/relative/absolute/fixed/sticky) */
+        /*top/bottom/right/left*/
+
+        /* static - it is by default position */
+        position: static;
+        top: 200px;
+        left:200px;
+
+        /* relative - move element from its original position */
+        position: relative;
+        top: 200px;
+        left:200px;
+
+        /* absolute - move element according to  its parent element */
+        position: absolute;
+        top: 200px;
+        left:200px;
+
+         /* fixed - html element fixed to the window screen */
+         /*  z-index: 100; --  after scrolling, content  move from inside the fixed content & not from  the above the fix content content */
+        position: fixed;
+        z-index: 100;
+        top: 200px;
+        left:200px;
+
+        /* sticky - move html element for a while and fixed to the window screen */
+        position: sticky;
+        top: 200px;
+        left:200px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Positioning in css</h1>
+
+    <div class="container">
+        <div class="container1"></div>
+        <div class="container2"></div>
+    </div>
+</body>
+</html>

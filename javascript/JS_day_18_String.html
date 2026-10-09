@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // String is a collection of characters
+        // stored in " " or ' '
+        // access using number index
+
+        // two ways to create string -:
+               // 1.Literal way
+                const str="Hello";
+                console.log(str);
+
+               // 2.creating instance of a string
+                const str2=new String("Hello");
+                console.log(str2);
+
+
+                // start indexing from 0
+                console.log(str[0]);            // H
+
+
+
+                // methods and properties
+                // length
+                //slice
+                //substr
+                //substring
+                //indexOf()
+                //lastIndexOf()
+                //at() / charAt()
+                //split()
+                //repeat()
+                // trim()
+                //includes()
+
+
+                // length -: to get length of string
+                const  firstName="aishwarya";
+                console.log(firstName.length);
+
+
+                // toUpperCase() / toLowerCase() -: convert string into uppercase or lowercase
+                console.log(firstName.toUpperCase());
+                console.log(firstName.toLowerCase());
+
+
+                // indexOf -: it returns index of 1st occurrence  char  if having same character multiple time
+                // lastIndexOf -: it returns index of last occurrence  char  if having same character multiple time
+                console.log(firstName.indexOf("a"));
+                console.log(firstName.lastIndexOf("a"));
+
+
+                // at() -: it returns a index of given character from string
+                // charAT() -: it returns a unicode/ASCII value from a given index character
+                console.log(firstName.at("P"));
+                console.log(firstName.charAt("t"));
+
+
+
+                // slice()-: Used to extract some part of string,negative index allowed
+                // syntax -: slice(start index,last index)
+                // ignore last index
+                let empRole="AI Engineer";
+                console.log(empRole.slice(0,3));
+                console.log(empRole.slice(-4,-2)); // ne
+
+
+                // substring()-: same as slice but here negative index are not allowed
+                console.log(empRole.substring(0,3));
+
+
+                // substr()-: syntactically same as splice
+                // used to extract some part of string
+                // syntax -: substr(start,length)
+
+                console.log(empRole.slice(0,4));        //AI E
+                console.log(empRole.substring(0,4))     //AI E
+                console.log(empRole.substr(0,4))        //AI E
+
+
+                // split() -:Used to convert string into array
+                let empAddress="Nashik city";
+                console.log(empAddress.split());
+
+                // '' / ""   split by character
+                // space - ' ' / " " split by word
+                console.log(empAddress.split(""));
+                console.log(empAddress.split(" "));
+
+
+                // reverse string
+                let str3="AI Engineer";
+                let result = str3.split("").reverse().join("");
+                console.log(result);
+
+
+                // trim()- :remove whitespace from given string
+                let role=" Fullstack Engineer";
+                console.log(role.length)
+
+                let res=role.trim()
+                console.log(res.length)
+
+
+                // repeat -: repeat given number of time
+                console.log(role.repeat(3))
+
+
+                // includes -: check given char or word includes or not
+                console.log(role.includes("Full"))
+
+
+
+    </script>
+
+
+
+</body>
+</html>

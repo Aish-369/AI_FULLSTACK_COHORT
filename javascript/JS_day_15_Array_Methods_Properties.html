@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        // Used to perform multiple operations on Array
+
+       // length()
+       // push / pop
+       // shift / unshift
+       // slice / splice
+       // index of / lastIndexOf
+       // at / charAt
+       // sort
+       // reverse
+       // join
+       // toString
+       // filter
+       // find
+       // map / for
+
+
+
+    // 3 points for each and every method
+       // purpose and syntax
+       // it will modify original array or not
+       // what it returns
+
+//--------------------------------------------------------------------------
+
+       // length - It returns length of an array
+        const arr=[1000,200,300,400,500]
+        console.log(arr)
+        console.log(arr.length)
+
+//--------------------------------------------------------------------------
+
+        // push -: Add elements to the end
+        // add element after last index of an array
+        // Original array modified
+        // it return new length
+
+        const arr2=["react","nodejs","API","AWS"]
+        console.log(arr2);
+        arr2.push("NextJs");
+        console.log(arr2);
+
+//--------------------------------------------------------------------------
+
+        // pop-: remove elements to the end
+        // remove element after last index of an array
+        // Original array modified
+        // it return remove elements
+
+        const arr3=["react","html","css","JS"]
+        console.log(arr3)
+        arr.pop();
+
+//--------------------------------------------------------------------------
+
+        // unshift -:add elements to start index
+        // Original array modified
+        // it return new length
+
+        const arr4=["admin","super-admin","manager","user"]
+        arr4.unshift("department");
+        console.log(arr4)
+
+//--------------------------------------------------------------------------
+
+        // Shift -:remover elements from start index
+        // Original array modified
+        // it return remove elements
+
+        const arr5=["admin","super-admin","manager","user"]
+        arr5.shift();
+        console.log(arr5)
+
+//--------------------------------------------------------------------------
+
+        // splice -: Used to remove or add multiple elements from an array
+        // syntax -: arr.splice(start,count)
+        // Original array modified
+        // it returns new array
+
+        const fruits=["Apple","banana","mango","orange","pineapple","guava"]
+        console.log(fruits)
+        fruits.splice(0,2)    // apple,banana remove
+        console.log(fruits.splice())       // return removed elements
+        console.log(fruits)
+        fruits.splice(4)      // start from 4 remove all from 4
+
+        fruits.splice(0,2,"pomogranate","custurd apple")      // remove 1st two elements and add pomogranate custurd apple
+        console.log(fruits)
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

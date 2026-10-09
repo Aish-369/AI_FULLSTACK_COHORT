@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- let keyword -:
+        1.used to declared JS variable
+        2.we can declared variable without initialization
+        3.we cannot redeclared variable with same name
+        4.we can update value
+        5.scope - block scope
+-->
+
+    <script>
+
+        // 1.used to declared JS variable
+        let name="Aishwarya";
+        let age=22;
+
+        // 2.we can declared variable without initialization
+        let empRole;
+            empRole="AI Engineer";
+        console.log(empRole);
+
+        // 3.we cannot redeclared variable with same name
+        // let userEmail="abc@gmail.com";
+        let userEmail="naraleprathmesh@gmail.com";
+
+        // 4.we can update value
+        let userPassword="$ABC@123";
+            userPassword="ABC@123";
+
+        // 5.scope - block scope
+        let a=50;
+        console.log(a);         // 50
+        if(true)
+        {
+            let a=600;
+            console.log(a);     // 600
+        }
+        console.log(a);         // 50
+
+    </script>
+
+
+
+</body>
+</html>

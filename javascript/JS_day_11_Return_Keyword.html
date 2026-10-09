@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- return keyword
+        1. return keyword is used to return data outside the function
+        2. It returns the value itself to that function
+        3. It stops the function execution after returning
+    -->
+
+
+
+    <script>
+
+        function Demo(x, y, z) {
+            // console.log(x+y+z);
+            return x + y + z;
+        }
+        let result = Demo(10, 30, 60);
+        console.log(result);
+
+
+        //-------------------------------------------------------
+
+        function Demo3(name, role) {
+            console.log("Hello A");
+            return name;
+            console.log("Hello B");
+        }
+        Demo3("Aishwarya", "AI Developer")
+
+        //-------------------------------------------------------
+
+
+        let withdrawAmount = Number(prompt("Enter Withdraw amount"));
+        let depositAmount = Number(prompt("Enter deposit amount"));
+        let total = 10000000;
+
+        function withdraw(total, amount) {
+            return total - amount;
+        }
+
+        function deposit(total, amount) {
+            return total + amount;
+        }
+
+        let newAmount = withdraw(total, withdrawAmount);
+        alert(newAmount);
+
+        newAmount = deposit(total, depositAmount);
+        alert(newAmount);
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

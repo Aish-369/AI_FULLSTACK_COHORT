@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Tag</h1>
+    <!-- used to fetch info from user -->
+
+    <!-- <form action="">
+
+        input tag used to get input form user
+        attributes
+        1.type-text,email,number,Search,file,checkbox,password
+        2.name & id -used to store data in database,name and is must be unique
+
+        <input type="text" name="" id="" enctype="">
+        value - attribute used to set default value
+
+        additional attribute -
+        1.required - mandatory user has to fill data that is compulsory
+        2.placeholder - hold place until user not fill data
+        3.readonly - only readable not changed
+        4.disable - disable field cannot enter data
+        5.checked - default checked / selected
+        6.multiple - select multiple files for uploading used in file type
+        7.pattern - validation for password or email
+    </form> -->
+
+
+    <h1>Personal Data</h1>
+    <form action="">
+
+        <!-- text for Name -->
+        <label for="">Enter Your Name</label>
+        <input type="text" name="firstname" id="">
+
+        <br><br>
+
+        <!-- Email -->
+        <label for="">Enter Your Email</label>
+        <input type="email" name="useremail" id="">
+
+        <br><br>
+
+        <!-- Password  -->
+        <label for="">Enter Your Password</label>
+        <input type="password" name="userpassword" id="">
+
+        <br><br>
+
+        <!--Mobile Number  -->
+        <label for="">Enter Your Number</label>
+        <input type="number" name="usernumber" id="">
+
+        <br><br>
+
+        <!-- Date -->
+        <label for="">Book An Appointment</label>
+        <input type="date" name="appointment" id="">
+
+        <br><br>
+
+        <!-- Time  -->
+        <label for="">Book Your Slot</label>
+        <input type="time" name="time" id="">
+
+        <br><br>
+
+        <!-- select option using radio option  -->
+        <label for="">Your Gender</label>
+        <input type="radio" name="gender" id="gender" value="Male"><span>Male</span>
+        <input type="radio" name="gender" id="gender" value="Female"><span>Female</span>
+        <input type="radio" name="gender" id="gender" value="Prefer Not to Say"><span>Prefer Not to Say</span>
+
+        <br><br>
+
+        <!-- Upload File  -->
+        <label for="">Upload Your Profile</label>
+        <input type="file" name="profile" id="">
+
+        <br><br>
+
+        <!-- checkbox  -->
+        <br><br>
+
+        <label for="">Choose Your Corses</label>
+        <input type="checkbox" name="courses" id="courses" value="Frontend"><span>Frontend</span>
+        <input type="checkbox" name="courses" id="courses" value="Backend"><span>Backend</span>
+        <input type="checkbox" name="courses" id="courses" value="Devops"><span>Devops</span>
+        <input type="checkbox" name="courses" id="courses" value="AI FullStack"><span>AI FullStack</span>
+        <input type="checkbox" name="courses" id="courses" value="Agentic AI"><span>Agentic AI</span>
+
+        <br><br>
+
+        <!-- dropdown -->
+        <label for="">Choose Your Education</label>
+        <select name="" id="">
+            <option value="None">Select</option>
+            <option value="BSC/BCA">BSC/BCA</option>
+            <option value="MCS/MCA">MCS/MCA</option>
+            <option value="BE/BTECH">BE/BTECH</option>
+            <option value="OTHER">OTHER</option>
+        </select>
+
+        <br><br>
+
+        <!-- textarea for getting big box for feeback  -->
+        <label for="">Enter Your Feedback</label>
+        <textarea  name="" id=""></textarea>
+
+        <br><br>
+
+        <!-- telephone -->
+        <label for="">Telephone No</label>
+        <input type="tel" name="" id="" value="+917741955355">
+
+        <br><br>
+
+        <!-- for select range  -->
+        <input type="range" name="" id="">
+
+        <!-- option for buttons -->
+        <h3>for submit data</h3>
+        <button>Save form</button>
+        <input type="submit" name="" id="">
+
+        <!-- reset data button -->
+        <br><br>
+        <h3>for reset data</h3>
+        <input type="reset" name="" id="">
+    </form>
+
+</body>
+</html>

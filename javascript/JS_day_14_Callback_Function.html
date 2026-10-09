@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        // Callback function -:
+            // Useful for async execution
+            // i will call back later
+            // One function execute after another function finish their execution
+            // passing one argument inside into another function as am argument
+
+
+            function A()
+            {
+                console.log("Hello A");
+            }
+            function B(callback)
+            {
+                callback();
+                console.log("Hello B");
+            }
+            B(A)             // Callback function
+
+
+
+
+            //-------------------------------------------------------------------------
+
+
+
+            function Greet()
+            {   
+                console.log("Hello Good Morinig");
+            }
+            function User(callback,name)
+            {
+                callback()
+                console.log(`hello ${name}`)
+            }
+            User(Greet,"Aishwarya")
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <!-- Functions -: Functions are blocks of code / bunch of statements
+                1. Avoid writing repeated code
+                2. we can called same function multiple times by calling that specific function
+                3. we can reuse multiple times by calling
+                4. we can used same function multiple times by passing multiple different arguments
+                5. Functions are mostly used on events
+
+        -->
+            <!-- Syntax -:
+                    Function declaration
+                    function function_name()
+                    {
+                        block of code
+                    }
+                    function calling / invoked
+                    function_name();
+            -->
+
+
+    <script>
+
+        function Demo()
+        {
+            console.log("Welcome to JS Function")
+        }
+        Demo();
+
+
+
+        // Function with parameters and arguments
+        // To make out function dynamic
+
+        // Parameters -: values which we are passing while functions declaration
+        // arguments -: values which are passing while function calling i.e Actual values
+
+
+//----------------------------------------------------------------------------------------------
+
+
+        function Demo2(name)            // name is parameter
+        {
+            console.log(name);
+        }
+        Demo2(123);                     // 123 is argument
+        Demo2("Aishwarya");             // "Aishwaryas" is argument
+
+
+    //----------------------------------------------------------------------------------------------
+
+
+
+        function addition(a,b)
+        {
+            console.log(a+b);
+        }
+        addition(20,40);
+        addition(100,200);
+
+
+    //----------------------------------------------------------------------------------------------
+
+        function Emp(name,skill)
+        {
+            console.log(`Your Name is ${name} and Skill is ${skill}`);
+        }
+        Emp("Aishwarya ","MernSTack");
+        Emp("Pawar ","MeanStack");
+
+    //----------------------------------------------------------------------------------------------
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

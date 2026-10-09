@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Hoisting in JS
+
+        // Is a JS By default behavior that variable declarations
+        // goes to the top of scope when we declared
+
+        // i.e we can use variable after declaration
+        //  or we can use variable before declaration
+
+        // var let const declaration are hoisted
+
+
+        // 1
+
+        var a = 30;
+        console.log(a)//30
+
+        //2
+        a = 40;
+        console.log(a) //40
+        var a;
+
+        // internally code like
+        // var a;
+        //a=40
+        //console.log(a)
+
+
+        // 3
+        // var skill="NextJS";
+        // console.log(skill);
+
+
+        // undefined- by default JS value when we doesn't pass value while declaration
+        // var skill;
+        let skill;
+        console.log(skill);// undefined
+
+
+
+        // 4
+        console.log(x);
+        var x = "shreya";
+
+        // internally
+        /*
+
+        var x;
+        console.log(x)//undefined
+
+
+
+        */
+
+
+        // variable declarations are hoisted
+        // variable initialization are not hoisted
+
+
+        // ****************************************
+
+        // let and const declarations are hoisted but not initialization
+        //  we can not used variable using let const until it has been declared
+
+
+        console.log(a) // undefined
+        var a = 400;
+
+
+        // let and const
+        var p;
+        console.log(p);//undefined
+
+        let s;
+        console.log(s);//undefined
+
+
+        // var
+        // name="Aish";
+        // console.log(name);
+        // var name;
+
+
+        // let and const goes into Temporal dead zone until it has been declared
+
+
+        let name;
+        name = "Aish";
+        console.log(name);//error
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

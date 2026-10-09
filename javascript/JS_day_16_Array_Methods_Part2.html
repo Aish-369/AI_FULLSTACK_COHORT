@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+
+
+
+        <script>
+
+//-------------------------------------------------------------------------------------
+
+        // slice() -: Used to extract some part of array
+        // Original array not modified
+        // Syntax -: slice(start,end(last index element ignored))
+        // return new array
+
+        const activeUser = ["Ashish", "Priya", "rushi", "shreya"]
+        console.log(activeUser)
+
+        let res = activeUser.slice(0, 2)
+        console.log(res)          // "Aarav","Priya" ignore last element
+
+        console.log(activeUser.slice(-3, -1));   // "Priya","Rohan"
+
+
+
+//-------------------------------------------------------------------------------------
+
+        // indexOf() -: find index of an element
+
+        const courses = ["JS", "Node", "html", "css", "react", "genAI", "Node", "Css"]
+        console.log(courses.indexOf("react"))        // 4
+
+//-------------------------------------------------------------------------------------
+
+        // lastIndexOf() -: start from last to return index of an array
+
+        console.log(courses.lastIndexOf("Node"))        // 6
+
+//-------------------------------------------------------------------------------------
+
+        // includes -: check elements present of not in array
+
+        console.log(courses.includes("AI"));          // false
+
+//-------------------------------------------------------------------------------------
+
+        // at - return elements on given position
+        console.log((courses.at(2)))        // html
+
+
+//-------------------------------------------------------------------------------------
+
+        // concat() -: to concat two or more array
+        const arr1 = [100, 200, 300, 400, 500]
+        const arr2 = ["Aishwarya", "Shreya", "divya"]
+
+        let newArray = (arr2.concat(arr1))
+        console.log(newArray)                   // ['Aishwarya', 'Shreya', 'divya', 100, 200, 300, 400, 500]
+
+//-------------------------------------------------------------------------------------
+
+        // toString() -: convert array to string
+        const orderStatus = ["pending", "Processing", "Shipped", "delivered", "Cancelled"]
+        console.log(orderStatus.toString())
+
+//-------------------------------------------------------------------------------------
+
+        // join() -: convert array to string
+        // we can add separator (# , / $ %)
+        console.log(orderStatus.join(" $ "))
+
+//-------------------------------------------------------------------------------------
+
+        // sort() -: Used to sort array in an ascending or descending order
+
+        const arr4 = ["x", "y", "a", "f", "z"]
+        console.log(arr4.sort())
+
+        const no = [200, 30, 100, 50, 400, 600]
+        console.log(no.sort())              // [100, 200, 30, 400, 50, 600]
+
+        // compare function
+        console.log(no.sort((a, b) => { return a - b }))       // [30, 50, 100, 200, 400, 600]
+
+//-------------------------------------------------------------------------------------
+
+        const mix = ["A", "X", "R", "S", 1000, 200, 400, 500, "Z"]
+        console.log(mix.sort((a, b) => { return a - b }))  // ['A', 'X', 'R', 'S', 200, 400, 500, 1000, 'Z']
+
+        const mix1 = ["A", "X", "R", "S", 1000, 200, 400, 500,"Z"];
+
+        const result=mix1.sort((a,b)=>{
+                if (typeof a === 'number' && typeof b === 'number') {
+                return a - b;
+                }
+
+
+                if (typeof a === "string" && typeof b === "string") {
+                return a.localeCompare(b)
+                }
+
+                return -1
+        })
+
+        console.log(mix1);
+
+
+//-------------------------------------------------------------------------------------
+
+        // reverse() -: to reverse array
+        const arr6=[1000,3000,50,70,800,100]
+        console.log(arr6.reverse())
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

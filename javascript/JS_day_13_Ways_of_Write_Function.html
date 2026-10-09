@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+    // ways of write functions -:
+        // Normal Function: A function with a name, defined using the function keyword.
+        // Function Expression: A function stored inside a variable.
+        // Anonymous Function: A function without a name.
+        // Fat Arrow / Arrow Function: A shorter way to write a function using =>.
+        // Self - Invoking Function(IIFE): A function that automatically runs immediately after it is created.
+
+
+
+
+//-----------------------------------------------------------------------------------
+
+        // Normal Function -:
+        function Demo() {
+            console.log("Hello Normal Function");
+        }
+        Demo()
+
+//-----------------------------------------------------------------------------------
+
+
+        // Function variable expression -:
+        let Demo2 = function Demo() {
+            console.log("Hello Function Variable expression");
+        }
+        Demo2
+
+
+//-----------------------------------------------------------------------------------
+
+        // Anonymous function -: no name to that specific function
+        const demo3 = function (x = 0, y = 0, ...rest) {
+            return x + y;
+        }
+        console.log(Demo3(1000, 2000));
+
+
+//-----------------------------------------------------------------------------------
+
+        // Arrow function / FAT arrow function / lambda function -:
+        // ES6 feature
+        // modern way to write function
+        // we can write function in single line
+        // no need to blind this keyword
+
+        const Demo4 = () => {
+            console.log("Hello arrow function");
+        }
+        Demo4()
+
+
+        // arrow function in single line
+        const demo5=()=>console.log("Hello arrow function")
+
+        // when we return something we need to pass {}
+        const Demo6=()=>{return "Hello arrow function with return keyword"}
+        Demo6()
+
+        // without ()
+        const Demo7=name=>{console.log(`hello ${name}`)}
+        Demo7()
+
+
+//--------------------------------------------------------------------------------------
+
+       // Function Hoisting -:JavaScript moves function declarations to the top of their scope before executing the code.
+
+
+       // Normal functions are hoisted
+        A()                      // function declaration top of scope
+        function A()
+        {
+            console.log("Hello Normal Function")
+        }
+
+
+
+        // other functions are not hoisted
+        let Demo8=()=>{
+            console.log("Hello arrow function")
+        }
+        Demo8();
+
+
+
+//--------------------------------------------------------------------------------------------
+
+        // Self - Invoking Function -:Immediate invoking function expression
+        // call itself
+
+
+        (
+            function()
+            {
+                console.log("Self Invoking Function")
+            }
+        )()
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

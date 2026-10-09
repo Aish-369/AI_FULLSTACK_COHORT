@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <h1>DataTypes in JS</h1>
+
+
+
+
+<!--
+        Primitive datatype -: buildIn datatype
+                number,string,boolean,null,undefined,symbol
+
+        Non-primitive datatype -: user define datatype
+                array,object,function
+-->
+
+
+
+        <script>
+
+//_______________________________ PRIMITIVE DATA TYPES ___________________________________________
+
+
+
+        // number - store numbers data
+        let age=13;
+        console.log(age);
+
+        let age1=30.5;
+        console.log(age);
+
+        // to check data type of any variable
+        //  typeof();
+
+        console.log(typeof age);            // number
+        console.log(typeof age1);
+
+//------------------------------------------------------------------------------
+
+        // string - store string data
+        let empRole="AI Engineer";
+        console.log(empRole);
+
+        let empRole2="Devops Engineer";
+        console.log(empRole);
+
+        console.log(typeof empRole);            // string
+        console.log(typeof empRole2);
+
+
+//------------------------------------------------------------------------------
+
+
+        // boolean -true/false - used for conditional statement
+        let isEligible=false;
+        console.log(isEligible);
+        console.log(typeof isEligible);        // boolean
+
+
+//------------------------------------------------------------------------------
+
+
+        // null - used to store null value
+        // it return object datatype
+        let empId=null;
+        console.log(empId);
+
+        console.log(typeof empId);        // object
+
+
+//------------------------------------------------------------------------------
+
+
+        // undefined - when we doesn't initialized value inside JS variable it return undefined value
+        let a;
+        console.log(a);         // undefined
+        console.log(typeof a);  // undefined
+
+
+//------------------------------------------------------------------------------
+
+        // symbol - it stored unique value and return boolean value
+        let no1="20";
+        let no2="20";
+        console.log(Symbol(no1)==Symbol(no2));     // false it only get unique values not same
+
+
+
+
+
+
+
+
+//_______________________________ NON-PRIMITIVE DATA TYPES ___________________________________________
+
+        // array - array is a collection of similar or different data type of elements
+        // stored data in a container [];
+        // indexing starts form 0
+        // JavaScript arrays are special types of objects
+
+        let skill=["React","NextJs","AWS","Data Science",1234,["ABC","XYZ"]];
+        console.log(skill);
+
+        console.log(typeof skill);
+
+
+//------------------------------------------------------------------------------
+
+
+        // object - store large amount of data in key:value pair
+        // used to store large data set
+
+        let intern2={
+                intern_Name:"Aishwarya",
+                intern_Id:1234,
+                intern_Skill:["HTML,JavaScript,NodeJS"],
+                intern_Stipend:10000,
+
+        }
+
+        console.log(intern2);
+        console.log(typeof intern2);
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+</body>
+</html>
