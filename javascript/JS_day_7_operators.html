@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Operators
+
+        // 1. Arithmetic
+        let a = 20;
+        let b = 5;
+
+        console.log(a + b); // 25
+        console.log(a - b); // 15
+        console.log(a * b); // 100
+        console.log(a / b); // 4
+        console.log(a % b); // 0
+
+
+        // BODMAS
+        console.log(a + b * a); // 120
+        console.log(a - b % a); // 15
+        console.log(a * b - a); // 80
+
+
+        // 2. Assignment
+        let A = 100;
+
+        console.log(A); // 100
+
+        let x = 10;
+        let y = x;
+
+        console.log(x); // 10
+        console.log(y); // 10
+
+        let p = 20;
+        let q = 30;
+
+        console.log(p += q); // 50
+        console.log(p *= q); // 1500
+        console.log(p /= q); // 50
+
+
+        // 3. Logical
+
+        console.log(true && false); // false
+        console.log(true && true); // true
+
+        console.log(18 > 30 && 20 < 100); // false
+
+        let age = 30;
+
+        console.log(age > 20 && age < 40); // true
+        console.log(age > 20 || age < 40); // true
+        console.log(18 > 30 || 20 < 100); // true
+
+        console.log(!true); // false
+        console.log(!(10 > 100)); // true
+
+
+        // 4. Comparison
+
+        console.log(10 < 20); // true
+        console.log(100 < 50); // false
+        console.log(10 > 100); // false
+        console.log(10 >= 100); // false
+        console.log(10 <= 100); // true
+        console.log(20 != 20); // false
+        console.log(20 != 120); // true
+
+
+        // 5. Equality
+
+        console.log(20 == 20); // true
+        console.log(20 == 100); // false
+
+        console.log(100 === 100); // true
+        console.log(20 === "20"); // false
+
+
+        // 6. Bitwise
+
+        console.log(5 & 1); // 1
+
+
+        // Modern JavaScript Operators
+
+        // 1. Ternary Operator
+        // 2. typeof Operator
+        // 3. Exponential Operator
+        // 4. Concatenation Operator
+        // 5. Nullish Coalescing Operator
+
+
+    </script>
+
+</body>
+
+</html>

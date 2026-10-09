@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>var Keyword in JavaScript</title>
+</head>
+
+<body>
+
+    <h1>var Keyword in JavaScript</h1>
+    <hr>
+
+    <script>
+
+        // 1. Declare a variable
+        var name;
+
+        console.log(name);
+        // Output: undefined
+
+
+        // 2. Declare and initialize
+        var age = 21;
+
+        console.log(age);
+        // Output: 21
+
+
+        // 3. Redeclare a variable
+        var city = "Ahmednagar";
+
+        var city = "Pune";
+
+        console.log(city);
+        // Output: Pune
+
+
+        // 4. Update a variable
+        var marks = 75;
+
+        console.log(marks);
+        // Output: 75
+
+        marks = 90;
+
+        console.log(marks);
+        // Output: 90
+
+
+        // 5. Redeclare and update
+        var course = "HTML";
+
+        var course = "CSS";
+
+        course = "JavaScript";
+
+        console.log(course);
+        // Output: JavaScript
+
+
+        // 6. Function scope
+        function studentDetails() {
+
+            var studentName = "Aishwarya";
+
+            console.log(studentName);
+
+        }
+
+        studentDetails();
+        // Output: Aishwarya
+
+
+        // 7. Var is not block scoped
+        if (true) {
+
+            var technology = "JavaScript";
+
+        }
+
+        console.log(technology);
+        // Output: JavaScript
+
+
+        // 8. Var hoisting
+        console.log(student);
+
+        var student = "Aishwarya";
+        // Output: undefined
+
+
+        // 9. Variable without initialization
+        var project;
+
+        console.log(project);
+        // Output: undefined
+
+        project = "SoulTalk";
+
+        console.log(project);
+        // Output: SoulTalk
+
+
+        // 10. Practical example
+        var company = "LearnSynaptic";
+
+        console.log(company);
+        // Output: LearnSynaptic
+
+        company = "Google";
+
+        console.log(company);
+        // Output: Google
+
+
+        // Important points about var
+
+        // var can be declared without a value
+        // var can be initialized
+        // var can be redeclared
+        // var can be reassigned
+        // var is function scoped
+        // var is not block scoped
+        // var supports hoisting
+
+    </script>
+
+</body>
+
+</html>
