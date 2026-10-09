@@ -1,0 +1,160 @@
+[1mdiff --git a/javascript/JS_day_7_Operators.html b/javascript/JS_day_7_Operators.html[m
+[1mindex fb24636..c8659ec 100644[m
+[1m--- a/javascript/JS_day_7_Operators.html[m
+[1m+++ b/javascript/JS_day_7_Operators.html[m
+[36m@@ -1,90 +1,107 @@[m
+ <!DOCTYPE html>[m
+ <html lang="en">[m
+[32m+[m
+ <head>[m
+     <meta charset="UTF-8">[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-    <title>Document</title>[m
+[32m+[m[32m    <title>JavaScript Operators</title>[m
+ </head>[m
+[32m+[m
+ <body>[m
+[31m-    <h1>Operators in JS</h1>[m
+ [m
+[32m+[m[32m    <script>[m
+ [m
+[32m+[m[32m        // Operators[m
+ [m
+[32m+[m[32m        // 1. Arithmetic[m
+[32m+[m[32m        let a = 20;[m
+[32m+[m[32m        let b = 5;[m
+ [m
+[31m-    <script>[m
+[32m+[m[32m        console.log(a + b); // 25[m
+[32m+[m[32m        console.log(a - b); // 15[m
+[32m+[m[32m        console.log(a * b); // 100[m
+[32m+[m[32m        console.log(a / b); // 4[m
+[32m+[m[32m        console.log(a % b); // 0[m
+ [m
+ [m
+[31m-        //  operator is a special symbol or keyword used to perform operations on values and variables[m
+[32m+[m[32m        // BODMAS[m
+[32m+[m[32m        console.log(a + b * a); // 120[m
+[32m+[m[32m        console.log(a - b % a); // 15[m
+[32m+[m[32m        console.log(a * b - a); // 80[m
+ [m
+[31m-        // Operator Types -:[m
+[31m-        // 1.Unary operator[m
+[31m-        // 2.Binary operator[m
+ [m
+[32m+[m[32m        // 2. Assignment[m
+[32m+[m[32m        let A = 100;[m
+ [m
+[31m-    //---------------------------------------------------------------------------------------[m
+[32m+[m[32m        console.log(A); // 100[m
+ [m
+[31m-        // 1.Arithmetic operators - To perform mathematical operations ( + , - , * , / )[m
+[32m+[m[32m        let x = 10;[m
+[32m+[m[32m        let y = x;[m
+ [m
+[31m-        let a=10;[m
+[31m-        let b=20;[m
+[31m-        console.log(a+b);         // 30[m
+[32m+[m[32m        console.log(x); // 10[m
+[32m+[m[32m        console.log(y); // 10[m
+ [m
+[31m-    //---------------------------------------------------------------------------------------[m
+[32m+[m[32m        let p = 20;[m
+[32m+[m[32m        let q = 30;[m
+ [m
+[31m-        // 2. Assignment operators - Used to assign a value to a variable ( = , += , -= , /= )[m
+[32m+[m[32m        console.log(p += q); // 50[m
+[32m+[m[32m        console.log(p *= q); // 1500[m
+[32m+[m[32m        console.log(p /= q); // 50[m
+ [m
+[31m-        let x=10;[m
+[31m-        let y=x;[m
+[31m-        console.log(x);         // 10[m
+[31m-        console.log(y);        // 10[m
+ [m
+[31m-    //----------------------------------------------------------------------------------------[m
+[32m+[m[32m        // 3. Logical[m
+ [m
+[31m-        // 3. Logical operator - To perform logical operations ( && , || , ! )[m
+[32m+[m[32m        console.log(true && false); // false[m
+[32m+[m[32m        console.log(true && true); // true[m
+ [m
+[31m-        // &&[m
+[31m-        console.log(true && false);       // false[m
+[31m-        console.log(true && true);       // true[m
+[31m-        console.log(18>30 && 20<100);   // false[m
+[32m+[m[32m        console.log(18 > 30 && 20 < 100); // false[m
+ [m
+[31m-        // ||[m
+[31m-        console.log(true || false);       // true[m
+[31m-        console.log(true || true);       // true[m
+[31m-        console.log(18>30 || 20<100);   // true[m
+[32m+[m[32m        let age = 30;[m
+ [m
+[31m-        // ! - It works reverse[m
+[31m-        console.log(!true);         // false[m
+[31m-        console.log(!(10>100));      // true[m
+[32m+[m[32m        console.log(age > 20 && age < 40); // true[m
+[32m+[m[32m        console.log(age > 20 || age < 40); // true[m
+[32m+[m[32m        console.log(18 > 30 || 20 < 100); // true[m
+ [m
+[31m-    //----------------------------------------------------------------------------------------[m
+[32m+[m[32m        console.log(!true); // false[m
+[32m+[m[32m        console.log(!(10 > 100)); // true[m
+ [m
+[31m-        // 4.Comparison operator - Used to compare two value ( < , > , <= ,>= != )[m
+[31m-        console.log(10<20);         //true[m
+[31m-        console.log(100<50);        // false[m
+[31m-        console.log(10>20);         //false[m
+ [m
+[31m-        console.log(20!=20);        // false[m
+[31m-        console.log(20!=120);       // true[m
+[32m+[m[32m        // 4. Comparison[m
+ [m
+[31m-    //------------------------------------------------------------------------------------------[m
+[32m+[m[32m        console.log(10 < 20); // true[m
+[32m+[m[32m        console.log(100 < 50); // false[m
+[32m+[m[32m        console.log(10 > 100); // false[m
+[32m+[m[32m        console.log(10 >= 100); // false[m
+[32m+[m[32m        console.log(10 <= 100); // true[m
+[32m+[m[32m        console.log(20 != 20); // false[m
+[32m+[m[32m        console.log(20 != 120); // true[m
+ [m
+[31m-        // == -: It compare only values[m
+[31m-            console.log(100==100);     //true[m
+[31m-            console.log(100=="100");     //true[m
+ [m
+[31m-        // === -: It compare values with their data types[m
+[31m-            console.log(100===100);     //true[m
+[31m-            console.log(100==="100");     //false[m
+[32m+[m[32m        // 5. Equality[m
+ [m
+[32m+[m[32m        console.log(20 == 20); // true[m
+[32m+[m[32m        console.log(20 == 100); // false[m
+ [m
+[31m-    //----------------------------------------------------------------------------------------[m
+[32m+[m[32m        console.log(100 === 100); // true[m
+[32m+[m[32m        console.log(20 === "20"); // false[m
+ [m
+ [m
+[32m+[m[32m        // 6. Bitwise[m
+ [m
+[31m-    </script>[m
+[32m+[m[32m        console.log(5 & 1); // 1[m
+ [m
+ [m
+[32m+[m[32m        // Modern JavaScript Operators[m
+ [m
+[32m+[m[32m        // 1. Ternary Operator[m
+[32m+[m[32m        // 2. typeof Operator[m
+[32m+[m[32m        // 3. Exponential Operator[m
+[32m+[m[32m        // 4. Concatenation Operator[m
+[32m+[m[32m        // 5. Nullish Coalescing Operator[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    </script>[m
+ [m
+ </body>[m
+[32m+[m
+ </html>[m
+\ No newline at end of file[m
