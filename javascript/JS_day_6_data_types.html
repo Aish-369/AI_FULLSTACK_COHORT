@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Data Types</title>
+</head>
+
+<body>
+
+    <h1>Data Types in JS</h1>
+    <hr>
+
+    <script>
+
+        // Variable
+        let name = "Aishwarya";
+        console.log(name);
+
+
+        // Primitive Data Types
+
+        // 1. Number
+        let age = 21;
+        let marks = 90.5;
+
+        console.log(age);
+        console.log(marks);
+        console.log(typeof age);
+        console.log(typeof marks);
+
+
+        // 2. String
+        let role = "AI Engineer";
+        let city = 'Pune';
+        let course = `JavaScript`;
+
+        console.log(role);
+        console.log(city);
+        console.log(course);
+
+        console.log(typeof role);
+
+
+        // 3. Boolean
+        let isStudent = true;
+        let isEligible = false;
+
+        console.log(isStudent);
+        console.log(typeof isStudent);
+
+
+        // 4. Null
+        let empId = null;
+
+        console.log(empId);
+        console.log(typeof empId);
+        // typeof null = object
+
+
+        // 5. Undefined
+        let salary;
+
+        console.log(salary);
+        console.log(typeof salary);
+
+
+        // 6. Symbol
+        let id1 = Symbol("id");
+        let id2 = Symbol("id");
+
+        console.log(id1 === id2);
+        // false
+
+        console.log(typeof id1);
+
+
+        // 7. BigInt
+        let bigNumber = 123456789012345678901234567890n;
+
+        console.log(bigNumber);
+        console.log(typeof bigNumber);
+
+
+        // Non-Primitive Data Types
+
+        // 1. Array
+        let skills = [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python",
+            100,
+            true
+        ];
+
+        console.log(skills);
+
+        console.log(skills[0]);
+        console.log(skills[2]);
+
+        console.log(skills.length);
+        console.log(typeof skills);
+
+        console.log(Array.isArray(skills));
+        // true
+
+
+        // 2. Object
+        let student = {
+
+            name: "Aishwarya",
+            age: 21,
+            city: "Pune",
+            skill: "JavaScript",
+            isStudent: true
+
+        };
+
+        console.log(student);
+        console.log(typeof student);
+
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student["skill"]);
+
+
+        // 3. Function
+        function greet() {
+
+            console.log("Hello Aishwarya");
+
+        }
+
+        greet();
+
+        console.log(typeof greet);
+
+
+        // Dynamic Typing
+        let x = 10;
+
+        console.log(typeof x);
+
+        x = "Hello";
+
+        console.log(typeof x);
+
+        x = true;
+
+        console.log(typeof x);
+
+
+        // typeof Examples
+        console.log(typeof 10);
+        console.log(typeof "Hello");
+        console.log(typeof true);
+        console.log(typeof undefined);
+        console.log(typeof null);
+        console.log(typeof 10n);
+        console.log(typeof Symbol());
+        console.log(typeof {});
+        console.log(typeof []);
+        console.log(typeof function () { });
+
+
+    </script>
+
+</body>
+
+</html>

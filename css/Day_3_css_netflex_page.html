@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- Background Overlay Section --- */
+        .hero-wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            /* Replace background-image with your actual tiled poster asset path */
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.9) 100%),
+                url('../assest/IN-en-20260720-TRIFECTA-perspective_ca5664c9-e7ca-45da-9d85-173740dbae71_large.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Navbar Styling --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+            z-index: 10;
+        }
+
+        .brand-logo {
+            color: #E50914;
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            user-select: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* Language Dropdown Select */
+        .lang-selector {
+            background: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+            border: 1px solid #666666;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .signin-btn {
+            background-color: #E50914;
+            color: #ffffff;
+            border: none;
+            padding: 7px 17px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* --- Main CTA Content Window --- */
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px 40px 20px;
+            z-index: 5;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .price-text {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .sub-prompt {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        /* --- Combined Email Signup Form --- */
+        .cta-form {
+            display: flex;
+            width: 100%;
+            max-width: 660px;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            flex: 1;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 18px 16px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #555555;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-wrapper input:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Native Placeholder positioning fallback code styling */
+        .input-wrapper input::placeholder {
+            color: #aaaaaa;
+        }
+
+        .submit-cta-btn {
+            background-color: #E50914;
+            color: #ffffff;
+            border: none;
+            padding: 0 30px;
+            border-radius: 4px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            white-space: nowrap;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-cta-btn:hover {
+            background-color: #c40812;
+        }
+
+        .terms-text {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin-top: 10px;
+        }
+
+        /* --- Responsive Breakdown Rules --- */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .brand-logo {
+                font-size: 28px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .price-text {
+                font-size: 16px;
+            }
+
+            .sub-prompt {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            .cta-form {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .submit-cta-btn {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-wrapper">
+
+        <!-- Header Navbar Block -->
+        <header>
+            <div class="brand-logo"><img
+                    src="../assest/AAAAAVvRDRqBcLS7fk0Qpns6gQSS3VdMMYtpN_ba4Nzu63yuVrE7JHt-MdKCNAQnJ8SrsPBqivurwF6ugwnAa54jBGNohFD6CNLHDjwQUnPO_cKrHSqgmLOAw0zUe2dRClJd4cchXguY1Bjj.svg"
+                    alt="Netflix" width="120"></div>
+            <div class="nav-actions">
+                <select class="lang-selector">
+                    <option>🌐 English</option>
+                    <option>हिन्दी</option>
+                </select>
+                <a href="#" class="signin-btn">Sign In</a>
+            </div>
+        </header>
+
+        <!-- Main Dynamic Landing Card Body -->
+        <main class="hero-content">
+            <h1>Unlimited movies,<br>shows, and more</h1>
+
+            <p class="price-text">Plans start at ₹149. Cancel anytime.</p>
+
+            <p class="sub-prompt">Ready to watch? Enter your email to start your membership.</p>
+
+            <form class="cta-form" onsubmit="event.preventDefault();">
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Email address" required autocomplete="email">
+                </div>
+                <button type="submit" class="submit-cta-btn">
+                    Try Now <span>&rsaquo;</span>
+                </button>
+            </form>
+
+            <p class="terms-text">New members only. Terms below.</p>
+        </main>
+
+    </div>
+
+</body>
+
+</html>

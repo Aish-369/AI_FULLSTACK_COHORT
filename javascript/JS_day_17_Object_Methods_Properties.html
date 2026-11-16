@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        // Methods and properties used to perform multiple operations
+
+        // Object.keys()
+        // Object.values()
+        // Object.entries()
+        // Object.freeze()
+        // Object.seal()
+        // Object.isExtensible()
+        // Object.assign()
+
+
+        const obj={
+            id:1,
+            name:"Aishwarya",
+            skills:["React","NextJS"],
+            ctc:"20LPA",
+            role:"AI Engineer"
+        }
+
+//----------------------------------------------------------------------------------------
+
+        // 1. Object.keys() -: Used to extract keys from given object in array format
+        console.log(Object.keys(obj))
+
+//----------------------------------------------------------------------------------------
+
+        // 2. Object.values() -: Used to extract value from given object in array format
+        console.log(Object.values(obj))
+
+//----------------------------------------------------------------------------------------
+
+        // 3. Object.entries() -: Used to extract key:value from given object in array format
+        console.log(Object.entries(obj))
+
+//----------------------------------------------------------------------------------------
+
+        // iterate keys in array
+        for (let keys of Object.keys(obj)) {
+            console.log(keys);
+        }
+
+        // iterate values in array
+        for (let value of Object.values(obj)) {
+            console.log(value);
+        }
+
+        // iterate entries(key:value) in array
+        for (let entries of Object.entries(obj)) {
+            console.log(entries);
+        }
+
+//----------------------------------------------------------------------------------------
+
+        // 4. Object.freeze() -: It freeze the object means we can not update once it is define
+        // It doesn't allow to modify object
+        console.log(Object.freeze(obj))
+
+        const obj2={
+            id:1,
+            name:"ABC",
+            role:"Developer"
+        }
+
+        obj2.role="Tester";    // update values
+
+        obj2.age=30;            // Add value
+
+        // but when we use freeze() before add or update value we can not able to update
+
+        console.log(obj2)
+
+//----------------------------------------------------------------------------------------
+
+        // 5. Object.seal() -:we can not add or update object properties(keys) but we can update values
+        console.log(Object.seal(obj))
+
+//----------------------------------------------------------------------------------------
+
+        // 6. Object.isExtensible() -: whether it is extensible(we can update/add values) or not
+
+//----------------------------------------------------------------------------------------
+
+        // 7. Object.assign() -: copy one object value inside into another object
+
+        const obj3 = {age: 20,role: "Engineer"};
+        const obj4 = {ctc: "10LPA",address: "Pune"};
+
+        console.log(Object.assign(obj3, obj4));
+        console.log(obj3)
+
+
+
+
+        // Object.call() -: Calls the function immediately.
+        // Object.blind() -: Same as call(), but arguments are passed as an array.
+        // Object.apply() -: Does not call the function immediately. It returns a new function.
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

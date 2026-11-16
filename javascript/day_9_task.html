@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>If Else If Else</title>
+</head>
+
+<body>
+
+    <h1>If elseif else</h1>
+
+    <script>
+
+        let shopamt = Number(prompt("Enter your shopping amount:"));
+
+        let discount;
+
+        if (shopamt >= 50000) {
+            discount = 40;
+        }
+        else if (shopamt >= 30000) {
+            discount = 30;
+        }
+        else if (shopamt >= 20000) {
+            discount = 20;
+        }
+        else {
+            discount = 0;
+        }
+
+        let discountedAmount = (shopamt * discount) / 100;
+        let payableAmount = shopamt - discountedAmount;
+
+        document.write("<h2>Hey, Your Total Shopping Amount Is " 
+                     + shopamt + "</h2>");
+
+        document.write("<h2>Hey, Your Got " 
+                     + discount + "% Discount</h2>");
+
+        document.write("<h2>Hey, Your Total Discounted Amount Is " 
+                     + discountedAmount + "</h2>");
+
+        document.write("<h2>Hey, Your Total Payable Amount Is " 
+                     + payableAmount + "</h2>");
+
+    </script>
+
+</body>
+</html>

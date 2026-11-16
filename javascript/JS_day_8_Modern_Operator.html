@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+
+        <h1>Modern Operator in JS</h1>
+
+
+        <script>
+
+
+
+
+                // 1.Concatenation Operator - to merge two or more string
+
+                let name = "Aishwarya";
+                let skill = "ReactJS";
+                console.log("Your Name is" + name);
+                console.log("My name is " + name + " My expertise is in " + skill);
+
+                // String literal (ES6 Feature) -: merge strings
+                // syntax - ( `${variable}` )
+
+                document.write(`Your Name is ${name} and Your skill is ${skill}`);
+
+
+
+                //----------------------------------------------------------------------------------------
+
+                // prompt() dialogue box - Get input from user
+
+                let empName = prompt('Enter Your Name', "John Peter");
+                document.write(`<h1>Emp Name is ${empName} </h1>`)
+
+
+                //------------------------------------------------------------------------------------------
+
+                // 2. Ternary Operator -: alternate to if else statement
+                // Syntax -: condition ? if true : if False
+
+                let age = prompt("Enter Your age", "18");
+                let result = age >= 18 ? "Welcome" : "hello";
+                alert(result);
+
+
+
+                //------------------------------------------------------------------------------------------
+
+                // 3. Nullish Coalsching Operator -: it return 1st argument / variable data if not nullish
+                // nullish (null / undefined)
+
+                let PAN = "ABCD136543";
+                let ADHAR = 12345678899;
+
+                console.log(PAN ?? ADHAR);
+
+
+                //------------------------------------------------------------------------------------------
+
+                // 4. exponential operator -: return power
+
+                console.log(2 ** 2);
+                console.log(3 ** 2);
+
+
+
+                //------------------------------------------------------------------------------------------
+
+                // type coercion -: JS automatically convert data types
+
+                // type casting -:Explicitly conversion of data type
+
+                // to convert string to number -: Number()  ,   +    ,   parseInt()
+
+                // to convert number to string -: str()
+                console.log(20 + "100");              // 20100
+                console.log(20 + Number("100"));      // 120
+
+                // Template Literal -:
+                
+
+
+
+        </script>
+
+</body>
+
+</html>

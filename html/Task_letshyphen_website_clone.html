@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HYPHEN - Skincare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f4;
+            color: #1f1f1f;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           OFFER BAR
+        ========================= */
+
+        .offer-bar {
+            background-color: #171717;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .offer-bar span {
+            margin: 0 15px;
+            color: #aaa;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 80px;
+            background-color: #f8f8f4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .logo span,
+        .footer-logo span {
+            font-size: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.5;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 18px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            height: 650px;
+
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.05)
+                ),
+
+                url("https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+
+            padding-left: 8%;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero-content > p:first-child {
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 90px;
+            line-height: 0.85;
+            font-weight: 800;
+            letter-spacing: -5px;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+        }
+
+        .hero-text {
+            margin-top: 30px;
+            line-height: 1.7;
+            max-width: 350px;
+        }
+
+        .shop-btn {
+            margin-top: 30px;
+            padding: 16px 30px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .shop-btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+
+        /* =========================
+           CATEGORY SECTION
+        ========================= */
+
+        .categories-section {
+            padding: 90px 5%;
+        }
+
+        .categories-section h2,
+        .products-section h2,
+        .why-section h2 {
+            font-size: 38px;
+            letter-spacing: -2px;
+            margin-bottom: 40px;
+        }
+
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-card {
+            text-align: center;
+        }
+
+        .category-image {
+            height: 350px;
+            overflow: hidden;
+            background-color: #e8e8e0;
+        }
+
+        .category-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-card h3 {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .category-card a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            border-bottom: 1px solid black;
+        }
+
+
+        /* =========================
+           PRODUCTS SECTION
+        ========================= */
+
+        .products-section {
+            padding: 80px 5%;
+            background-color: #eeeeea;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .small-heading {
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .view-all {
+            background: none;
+            border: none;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+        }
+
+        .product-image {
+            height: 360px;
+            position: relative;
+            overflow: hidden;
+            background-color: #f2f2ed;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: black;
+            color: white;
+            padding: 7px 10px;
+            font-size: 9px;
+            z-index: 2;
+        }
+
+        .wishlist {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 22px;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .stars {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .product-info h3 {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-info p {
+            font-size: 11px;
+            color: #777;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .price {
+            font-size: 17px;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .cart-btn {
+            width: 100%;
+            padding: 13px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .cart-btn:hover {
+            background-color: #555;
+        }
+
+
+        /* =========================
+           PROMO BANNER
+        ========================= */
+
+        .promo-banner {
+            height: 500px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+
+                url("https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .promo-content p {
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        .promo-content h2 {
+            font-size: 75px;
+            line-height: 0.9;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           WHY SECTION
+        ========================= */
+
+        .why-section {
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .why-text {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 70px;
+        }
+
+        .feature-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 12px;
+            color: #777;
+        }
+
+
+        /* =========================
+           NEWSLETTER
+        ========================= */
+
+        .newsletter {
+            background-color: #d9d9ce;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 42px;
+            letter-spacing: -2px;
+        }
+
+        .newsletter p {
+            margin: 20px 0 30px;
+            color: #555;
+        }
+
+        .email-box {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+        }
+
+        .email-box input {
+            flex: 1;
+            padding: 16px;
+            border: 1px solid #777;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .email-box button {
+            padding: 16px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background-color: #171717;
+            color: white;
+            padding: 70px 5% 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .footer-brand p {
+            color: #aaa;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            font-size: 11px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-column h3 {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #aaa;
+            font-size: 11px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            margin-top: 60px;
+            padding-top: 20px;
+            color: #888;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           SEARCH POPUP
+        ========================= */
+
+        .search-popup,
+        .cart-popup {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .search-box,
+        .cart-box {
+            background-color: white;
+            padding: 40px;
+            width: 500px;
+            position: relative;
+        }
+
+        .search-box span,
+        .cart-box > span {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .category-container,
+            .products-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .offer-bar {
+                font-size: 9px;
+                line-height: 1.6;
+            }
+
+            .offer-bar span {
+                margin: 0 5px;
+            }
+
+            .navbar {
+                height: 65px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav-icons {
+                font-size: 17px;
+                gap: 10px;
+            }
+
+            .hero {
+                height: 550px;
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 60px;
+            }
+
+            .categories-section,
+            .products-section,
+            .why-section {
+                padding: 60px 20px;
+            }
+
+            .categories-section h2,
+            .products-section h2,
+            .why-section h2 {
+                font-size: 30px;
+            }
+
+            .category-container,
+            .products-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .category-image {
+                height: 220px;
+            }
+
+            .product-image {
+                height: 230px;
+            }
+
+            .product-info {
+                padding: 12px;
+            }
+
+            .product-info h3 {
+                font-size: 11px;
+            }
+
+            .product-info p {
+                font-size: 9px;
+            }
+
+            .promo-banner {
+                height: 400px;
+            }
+
+            .promo-content h2 {
+                font-size: 55px;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 10px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 20px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .email-box {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- OFFER BAR -->
+
+    <div class="offer-bar">
+
+        Buy Any 2 Products @ ₹799
+
+        <span>|</span>
+
+        Buy Any 3 Products @ ₹1149
+
+        <span>|</span>
+
+        10% HyCash Every Order
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            HYPHEN<span>.</span>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="#new">NEW LAUNCHES</a>
+
+            <a href="#shop">SHOP</a>
+
+            <a href="#category">SHOP BY CONCERN</a>
+
+            <a href="#routine">ROUTINE</a>
+
+            <a href="#gift">GIFT KIT</a>
+
+            <a href="#school">SKIN SCHOOL</a>
+
+            <a href="#about">ABOUT US</a>
+
+        </nav>
+
+
+        <div class="nav-icons">
+
+            <span onclick="openSearch()">⌕</span>
+
+            <span>♡</span>
+
+            <span onclick="openCart()">🛒</span>
+
+            <span>👤</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p>SKINCARE THAT GETS YOU</p>
+
+            <h1>
+
+                HAVE IT
+
+                <br>
+
+                <span>ALL.</span>
+
+            </h1>
+
+            <p class="hero-text">
+
+                Result-driven skincare powered by the best
+                ingredients for your skin.
+
+            </p>
+
+            <button class="shop-btn">
+
+                SHOP NOW →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories-section" id="category">
+
+        <h2>SHOP BY CATEGORY</h2>
+
+
+        <div class="category-container">
+
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+                <h3>FACE SERUM</h3>
+
+                <a href="#">SHOP NOW →</a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+                <h3>SUNSCREEN</h3>
+
+                <a href="#">SHOP NOW →</a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+                <h3>MOISTURIZER</h3>
+
+                <a href="#">SHOP NOW →</a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-image">
+
+                    <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+                <h3>FACE CLEANSER</h3>
+
+                <a href="#">SHOP NOW →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BESTSELLERS -->
+
+    <section class="products-section" id="shop">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="small-heading">
+
+                    OUR MOST LOVED
+
+                </p>
+
+                <h2>BESTSELLERS</h2>
+
+            </div>
+
+
+            <button class="view-all">
+
+                VIEW ALL →
+
+            </button>
+
+        </div>
+
+
+        <div class="products-container">
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+
+                        BESTSELLER
+
+                    </span>
+
+                    <span class="wishlist">
+
+                        ♡
+
+                    </span>
+
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+                    <h3>
+
+                        Double Shot Radiance Lift Face Serum
+
+                    </h3>
+
+                    <p>
+
+                        Reduces dark spots and improves skin firmness
+
+                    </p>
+
+                    <div class="price">
+
+                        $7.99
+
+                    </div>
+
+                    <button class="cart-btn"
+
+                        onclick="addToCart('Radiance Face Serum', 7.99)">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+
+                        BESTSELLER
+
+                    </span>
+
+                    <span class="wishlist">
+
+                        ♡
+
+                    </span>
+
+                    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+                    <h3>
+
+                        All I Need Sunscreen SPF 50
+
+                    </h3>
+
+                    <p>
+
+                        Lightweight UV protection for everyday use
+
+                    </p>
+
+                    <div class="price">
+
+                        $5.49
+
+                    </div>
+
+                    <button class="cart-btn"
+
+                        onclick="addToCart('SPF 50 Sunscreen', 5.49)">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+
+                        NEW
+
+                    </span>
+
+                    <span class="wishlist">
+
+                        ♡
+
+                    </span>
+
+                    <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+                    <h3>
+
+                        Barrier Repair Moisturizer
+
+                    </h3>
+
+                    <p>
+
+                        Oil-free gel cream for healthy skin
+
+                    </p>
+
+                    <div class="price">
+
+                        $5.49
+
+                    </div>
+
+                    <button class="cart-btn"
+
+                        onclick="addToCart('Barrier Repair Moisturizer', 5.49)">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">
+
+                        BESTSELLER
+
+                    </span>
+
+                    <span class="wishlist">
+
+                        
+
+                    </span>
+
+                    <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80">
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                    </div>
+
+                    <h3>
+
+                        Rice Water Cleanser
+
+                    </h3>
+
+                    <p>
+
+                        Brightens and treats dark spots
+
+                    </p>
+
+                    <div class="price">
+
+                        $3.99
+
+                    </div>
+
+                    <button class="cart-btn"
+
+                        onclick="addToCart('Rice Water Cleanser', 3.99)">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROMO -->
+
+    <section class="promo-banner">
+
+        <div class="promo-content">
+
+            <p>
+
+                THE SKINCARE ROUTINE
+                YOUR SKIN WILL THANK YOU FOR
+
+            </p>
+
+            <h2>
+
+                GLOW
+
+                <br>
+
+                YOUR WAY
+
+            </h2>
+
+            <button class="shop-btn">
+
+                SHOP ROUTINES →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY HYPHEN -->
+
+    <section class="why-section" id="about">
+
+        <p class="small-heading">
+
+            WHY CHOOSE US?
+
+        </p>
+
+        <h2>
+
+            WHY HYPHEN IT?
+
+        </h2>
+
+        <p class="why-text">
+
+            Why choose between multiple ingredients when you can
+            have it all in one bottle?
+
+            We believe in result-driven skincare by blending
+            the best ingredients together.
+
+        </p>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    
+
+                </div>
+
+                <h3>VEGAN</h3>
+
+                <p>
+
+                    Clean and vegan skincare
+
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    
+
+                </div>
+
+                <h3>RESULT DRIVEN</h3>
+
+                <p>
+
+                    Ingredients that work
+
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    
+
+                </div>
+
+                <h3>ZERO PLASTIC</h3>
+
+                <p>
+
+                    Better for the planet
+
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    
+
+                </div>
+
+                <h3>PETA CERTIFIED</h3>
+
+                <p>
+
+                    Cruelty-free products
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <h2>
+
+            STAY IN THE KNOW
+
+        </h2>
+
+        <p>
+
+            Get the latest product drops,
+            exclusive offers and skincare tips.
+
+        </p>
+
+
+        <div class="email-box">
+
+            <input type="email"
+
+                placeholder="Enter your email address">
+
+
+            <button>
+
+                SUBSCRIBE →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    HYPHEN<span>.</span>
+
+                </div>
+
+                <p>
+
+                    Skincare made for everyone.
+                    Have it all.
+
+                </p>
+
+
+                <div class="social-icons">
+
+                    <span>Instagram</span>
+
+                    <span>Facebook</span>
+
+                    <span>YouTube</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>COMPANY</h3>
+
+                <a href="#">About Us</a>
+
+                <a href="#">Contact Us</a>
+
+                <a href="#">Privacy Policy</a>
+
+                <a href="#">Terms & Conditions</a>
+
+                <a href="#">Shipping Policy</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>QUICK LINKS</h3>
+
+                <a href="#">Track Order</a>
+
+                <a href="#">Feedback</a>
+
+                <a href="#">Return & Refund</a>
+
+                <a href="#">FAQ</a>
+
+                <a href="#">Support</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>SHOP</h3>
+
+                <a href="#">Face Serum</a>
+
+                <a href="#">Sunscreen</a>
+
+                <a href="#">Moisturizer</a>
+
+                <a href="#">Face Cleanser</a>
+
+                <a href="#">Lip Balms</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 HYPHEN. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- SEARCH POPUP -->
+
+    <div class="search-popup" id="searchPopup">
+
+        <div class="search-box">
+
+            <span onclick="closeSearch()">
+
+                ✕
+
+            </span>
+
+            <input type="text"
+
+                placeholder="Search products...">
+
+        </div>
+
+    </div>
+
+
+    <!-- CART POPUP -->
+
+    <div class="cart-popup" id="cartPopup">
+
+        <div class="cart-box">
+
+            <span onclick="closeCart()">
+
+                ✕
+
+            </span>
+
+            <h2>
+
+                YOUR CART
+
+            </h2>
+
+            <br>
+
+            <div id="cartItems">
+
+                Your cart is empty.
+
+            </div>
+
+            <br>
+
+            <h3 id="total">
+
+                Total: $0.00
+
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let cart = [];
+
+
+        function addToCart(productName, price) {
+
+            cart.push({
+
+                name: productName,
+
+                price: price
+
+            });
+
+            alert(productName + " added to cart!");
+
+            updateCart();
+
+        }
+
+
+        function updateCart() {
+
+            let cartItems =
+                document.getElementById("cartItems");
+
+            let totalElement =
+                document.getElementById("total");
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML =
+                    "Your cart is empty.";
+
+                totalElement.innerHTML =
+                    "Total: $0.00";
+
+                return;
+
+            }
+
+
+            let total = 0;
+
+            cartItems.innerHTML = "";
+
+
+            cart.forEach(function(item, index) {
+
+                total += item.price;
+
+
+                cartItems.innerHTML += `
+
+                    <div class="cart-item">
+
+                        <p>
+
+                            ${item.name}
+
+                        </p>
+
+                        <p>
+
+                            $${item.price.toFixed(2)}
+
+                        </p>
+
+                        <button onclick="removeItem(${index})">
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+                    <hr>
+
+                `;
+
+            });
+
+
+            totalElement.innerHTML =
+                "Total: $" + total.toFixed(2);
+
+        }
+
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            updateCart();
+
+        }
+
+
+        function openCart() {
+
+            document.getElementById("cartPopup")
+                .style.display = "flex";
+
+        }
+
+
+        function closeCart() {
+
+            document.getElementById("cartPopup")
+                .style.display = "none";
+
+        }
+
+
+        function openSearch() {
+
+            document.getElementById("searchPopup")
+                .style.display = "flex";
+
+        }
+
+
+        function closeSearch() {
+
+            document.getElementById("searchPopup")
+                .style.display = "none";
+
+        }
+
+
+        window.onclick = function(event) {
+
+            let searchPopup =
+                document.getElementById("searchPopup");
+
+            let cartPopup =
+                document.getElementById("cartPopup");
+
+
+            if (event.target === searchPopup) {
+
+                searchPopup.style.display = "none";
+
+            }
+
+
+            if (event.target === cartPopup) {
+
+                cartPopup.style.display = "none";
+
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>

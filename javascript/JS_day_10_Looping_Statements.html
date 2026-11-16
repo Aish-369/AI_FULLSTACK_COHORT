@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Looping Statements</h1>
+    <!-- Looping Statement -: To execute same block of code  multiple time until condition become false -->
+    <!--
+        1.for -: Used for iterating and one of the easiest way to write looping statement
+            Syntax -:   for(initialization;condition,inc/dec)
+
+        2.while -: execute if condition is true
+            Syntax -: while(condition)
+                        {
+                            Block of code
+                            inc/dec
+                        }
+
+
+        3.do while -: execute at least once if condition goes wrong also
+            Syntax -: do{
+                            block of code
+                            inc/dec
+                        }
+                            while(condition)
+    -->
+
+
+
+    <script>
+
+
+        // while
+        let a = 1;
+        while (a <= 100) {
+            console.log("Hello Welcome Dear...");
+            a++;
+        }
+
+
+        let x = 1;
+        while (x <= 50) {
+            if (x % 2 == 0) {
+                console.log(x);
+            }
+            x++;
+        }
+
+
+
+
+
+        // do while
+        let y = 1;
+        do {
+            console.log("Welcome to js");
+            y++;
+        } while (y <= 10)
+
+
+
+
+        //sum
+        let no = 2;
+        let sum = 0;
+        do {
+            console.log("Table of", no);
+            let j = 1;
+            do {
+                console.log(no * j);
+                j++;
+            } while (j <= 10);
+            sum += no;
+            no++;
+        } while (no <= 15);
+        console.log("Sum =", sum);
+
+
+
+
+        // fact
+        
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators in JS</h1>
+
+
+
+
+    <script>
+
+
+        //  operator is a special symbol or keyword used to perform operations on values and variables
+
+        // Operator Types -:
+        // 1.Unary operator
+        // 2.Binary operator
+
+
+    //---------------------------------------------------------------------------------------
+
+        // 1.Arithmetic operators - To perform mathematical operations ( + , - , * , / )
+
+        let a=10;
+        let b=20;
+        console.log(a+b);         // 30
+
+    //---------------------------------------------------------------------------------------
+
+        // 2. Assignment operators - Used to assign a value to a variable ( = , += , -= , /= )
+
+        let x=10;
+        let y=x;
+        console.log(x);         // 10
+        console.log(y);        // 10
+
+    //----------------------------------------------------------------------------------------
+
+        // 3. Logical operator - To perform logical operations ( && , || , ! )
+
+        // &&
+        console.log(true && false);       // false
+        console.log(true && true);       // true
+        console.log(18>30 && 20<100);   // false
+
+        // ||
+        console.log(true || false);       // true
+        console.log(true || true);       // true
+        console.log(18>30 || 20<100);   // true
+
+        // ! - It works reverse
+        console.log(!true);         // false
+        console.log(!(10>100));      // true
+
+    //----------------------------------------------------------------------------------------
+
+        // 4.Comparison operator - Used to compare two value ( < , > , <= ,>= != )
+        console.log(10<20);         //true
+        console.log(100<50);        // false
+        console.log(10>20);         //false
+
+        console.log(20!=20);        // false
+        console.log(20!=120);       // true
+
+    //------------------------------------------------------------------------------------------
+
+        // == -: It compare only values
+            console.log(100==100);     //true
+            console.log(100=="100");     //true
+
+        // === -: It compare values with their data types
+            console.log(100===100);     //true
+            console.log(100==="100");     //false
+
+
+    //----------------------------------------------------------------------------------------
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
