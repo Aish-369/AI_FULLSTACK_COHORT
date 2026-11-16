@@ -1,0 +1,40 @@
+
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Aishwarya Pawar",
+      "email": "aishwarya@gmail.com",
+      "age": 22,
+      "course": "React JS"
+    },
+    {
+      "id": 2,
+      "name": "shreya Wagh",
+      "email": "shreya@gmail.com",
+      "age": 21,
+      "course": "JavaScript"
+    },
+    {
+      "id": 3,
+      "name": "Chaitali Sabale",
+      "email": "chaitali@gmail.com",
+      "age": 23,
+      "course": "Python"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Sabale",
+      "email": "sneha@gmail.com",
+      "age": 22,
+      "course": "React JS"
+    },
+    {
+      "id": 5,
+      "name": "Amruta Pawar",
+      "email": "amruta@gmail.com",
+      "age": 24,
+      "course": "Node JS"
+    }
+  ]
+}
