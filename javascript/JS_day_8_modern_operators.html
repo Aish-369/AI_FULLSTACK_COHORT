@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern JavaScript Operators</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Modern JavaScript Operators
+
+
+        // 1. Concatenation Operator
+
+        let name = "Aishwarya";
+        let skill = "JavaScript";
+
+        document.write("Your name is " + name + "<br>");
+        document.write("Your skill is " + skill);
+
+
+        // 2. Template Literal
+
+        document.write(`<br><br>Your name is ${name}`);
+        document.write(`<br>Your skill is ${skill}`);
+
+
+        // 3. Prompt
+
+        let userName = prompt("Enter your name:");
+
+        document.write(`<br><br>Hello ${userName}`);
+
+
+        // 4. typeof Operator
+
+        console.log(typeof name);
+        console.log(typeof 21);
+
+
+        // 5. Exponential Operator
+
+        let number = 2;
+
+        console.log(number ** 3);
+        // 8
+
+
+        // 6. Ternary Operator
+
+        let age = 21;
+
+        let result = age >= 18 ? "Eligible" : "Not Eligible";
+
+        console.log(result);
+
+
+        // 7. Nullish Coalescing Operator
+
+        let username = null;
+
+        let displayName = username ?? "Guest";
+
+        console.log(displayName);
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+
+/* Main page layout */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px #00000015;
+  font-family: Arial, sans-serif;
+}
+
+/* Student information card */
+.details {
+  background: #eef5ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+/* Buttons */
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Counter section */
+.counter {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 12px;
+}

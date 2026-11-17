@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // Object is an entity having methods and properties
+        // we can store large amount of data in key:value pair
+        // Js is object based scripting language,everything in JS is object
+
+        // Syntax -: const obj={key:value}
+
+
+        const user = {
+            id: "1234",
+            age: 30,
+            role: "AI Engineer",
+            package: "10LPA",
+            experience: "2YRS"
+        }
+        console.log(user);
+
+
+        // ways to create object
+        // 1 .literal way
+        // const obj={key:value}
+
+        // 2.Creating instance of an object
+        const user2 = new Object({ id: 1, "name": "Aishwarya" });
+        console.log(user2)
+
+        // Itering Object
+        // forin / forof
+
+        for (let x in user) {
+            console.log(x)
+            console.log(user[x])
+            console.log(`${x}:${user[x]}`)      // key:value
+            console.table(user[x]);
+        }
+
+
+        // access data using named index
+
+        const employee = {
+            id: 101,
+            name: "Aishwarya",
+            age: 24,
+            department: { name: "ABC", address: "Pune" },
+            salary: 35000,
+            city: "Pune",
+            skills: ["HTML", "CSS", "JavaScript"]
+        };
+
+        console.log(employee);
+        console.log(employee.name);     // access named index
+        // or
+        console.log(employee["name"]);     // access named index
+
+        console.log(employee.department["address"]);
+        // or
+        console.log(employee.department.address);
+
+
+
+        // array object
+        const employees = [
+            {
+                id: 101,
+                name: "shreya",
+                age: 24,
+                department: "IT",
+                salary: 35000,
+                city: "Pune"
+            },
+            {
+                id: 102,
+                name: "Sneha",
+                age: 26,
+                department: "HR",
+                salary: 40000,
+                city: "Mumbai"
+            },
+            {
+                id: 103,
+                name: "ashish",
+                age: 23,
+                department: "Finance",
+                salary: 32000,
+                city: "Nashik"
+            },
+        ];
+
+        console.table(employees);
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
